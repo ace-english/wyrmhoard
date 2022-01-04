@@ -1,0 +1,9 @@
+[ ] room root
+	[ ] door
+	[ ] wall
+	[ ] decor
+	[ ] lights
+	[x] door animation
+	[ ] ability to add more rooms
+[ ] player
+	[x] fly controls (thanks Sergey Stafeev)
