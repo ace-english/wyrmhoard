@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DungeonRoot : MonoBehaviour
 {
-
+    //dictionary of coords, room pointers (or room serial/string encoders)
+    public GameObject roomPrefab;
+    Dictionary<RoomCoord,Room> dungeonMap;
 
     #region Singleton
     private static DungeonRoot _instance;
@@ -26,15 +28,8 @@ public class DungeonRoot : MonoBehaviour
     }
     #endregion
 
-    // Start is called before the first frame update
-    void Start()
+    public void CreateRoom(RoomCoord coord)
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

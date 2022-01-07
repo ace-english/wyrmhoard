@@ -5,18 +5,14 @@ using UnityEngine;
 public class NextRoomIndicator : MonoBehaviour
 {
     public GameObject arrowIndicator;
+    public RoomCoord coord;
 
-    // Start is called before the first frame update
-    void Start()
+    //on instantiateion, each arrow should generate a ID/coord for its potential position
+    private void Awake()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnMouseEnter()
     {
         arrowIndicator.SetActive(true);
@@ -28,5 +24,6 @@ public class NextRoomIndicator : MonoBehaviour
     void OnMouseDown()
     {
         print("Pribyet!");
+        DungeonRoot.Instance.CreateRoom(coord);
     }
 }

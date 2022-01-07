@@ -10,7 +10,7 @@
 	[ ] ability to add more rooms
 		[x] emmissive model
 		[x] on click hitbox
-		[ ] hide until hovered
+		[x] hide until hovered
 	[ ] traps
 	[ ] treasure
 [ ] player
@@ -18,3 +18,10 @@
 	[ ] UI
 [ ] walls cutaway
 up and down? spiral staircase?
+	- add additional staircases
+	- check if no staircases
+[ ] save files
+	-parser
+	should be sharable and editable, similar to stardew. Calculate cost at run time
+
+Give knight a torch!
