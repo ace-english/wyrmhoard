@@ -1,9 +1,20 @@
 [ ] room root
-	[ ] door
-	[ ] wall
+	[x] door
+	[x] wall
 	[ ] decor
-	[ ] lights
+	[x] lights
+		[x] flicker
+		[ ] animated mesh
+		[x] emmissive material
 	[x] door animation
 	[ ] ability to add more rooms
+		[x] emmissive model
+		[x] on click hitbox
+		[ ] hide until hovered
+	[ ] traps
+	[ ] treasure
 [ ] player
 	[x] fly controls (thanks Sergey Stafeev)
+	[ ] UI
+[ ] walls cutaway
+up and down? spiral staircase?
