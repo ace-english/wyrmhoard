@@ -10,7 +10,11 @@ public class NextRoomIndicator : MonoBehaviour
     //on instantiateion, each arrow should generate a ID/coord for its potential position
     private void Awake()
     {
-        
+        //edit: nvm all this
+        //get parent room's coords
+        //name yourself accordingly
+        //check dungeon's coords
+        //if you have a room there, disable yourself
     }
 
     void OnMouseEnter()
