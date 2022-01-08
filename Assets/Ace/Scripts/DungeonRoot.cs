@@ -38,10 +38,6 @@ public class DungeonRoot : MonoBehaviour
 
     public void CreateRoom(RoomCoord coord)
     {
-        //first check dictionary to see if there already exists a room at that location
-        //if not, 
-        //create it
-        //add to dictionary
         if (!IsThereARoomAt(coord))
         {
             //may change axes later
@@ -54,6 +50,7 @@ public class DungeonRoot : MonoBehaviour
 
             //make prefab there
             GameObject newRoomGO = Instantiate(roomPrefab, newRoomTransform, Quaternion.identity);
+            newRoomGO.transform.SetParent(this.gameObject.transform);
             Room newRoom = newRoomGO.GetComponent<Room>();
             newRoom.init(coord);
 
@@ -66,5 +63,15 @@ public class DungeonRoot : MonoBehaviour
     public bool IsThereARoomAt(RoomCoord coord)
     {
         return dungeonMap.ContainsKey(coord);
+    }
+
+    public Room GetRoomAt(RoomCoord coord)
+    {
+        Room room;
+        if(dungeonMap.TryGetValue(coord, out room))
+        {
+            return room;
+        }
+        return null;
     }
 }

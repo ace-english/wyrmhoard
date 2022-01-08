@@ -27,7 +27,7 @@ public class NextRoomIndicator : MonoBehaviour
     }
     void OnMouseDown()
     {
-        print("Pribyet!");
+        print("creating new room at " + coord.ToString());
         DungeonRoot.Instance.CreateRoom(coord);
     }
 }

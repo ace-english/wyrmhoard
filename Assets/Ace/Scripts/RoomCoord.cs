@@ -12,4 +12,18 @@ public class RoomCoord
         this.y = y;
         this.z = z;
     }
+
+    public static RoomCoord operator +(RoomCoord a, RoomCoord b)
+    {
+        RoomCoord ret = b;
+        ret.x += a.x;
+        ret.y += a.y;
+        ret.z += a.z;
+        return ret;
+    }
+
+    public override string ToString()
+    {
+        return "(" + x + "," + y + "), floor "+z;
+    }
 }
