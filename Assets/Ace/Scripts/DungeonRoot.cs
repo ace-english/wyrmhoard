@@ -86,15 +86,15 @@ public class DungeonRoot : MonoBehaviour
     {
         Room room = GetRoomAt(coord);
         room.RemoveNeighboringDoors();
-        //remove itself from the master map
         dungeonMap.Remove(coord);
-        foreach (Transform child in room.transform)
-        {
-            GameObject.Destroy(child.gameObject);
-        }
-        GameObject.Destroy(room.gameObject);       
+        GameObject.Destroy(room.gameObject);
         //TODO: ask pathfinder if all rooms are accessible
-        
+
+        if (dungeonMap.Count <= 1)
+        {
+            DeleteMode = false;
+        }
+
     }
 
     public void EnableBuildMode()
@@ -105,7 +105,10 @@ public class DungeonRoot : MonoBehaviour
 
     public void EnableDeleteMode()
     {
-        BuildMode = false;
-        DeleteMode = true;
+        if (dungeonMap.Count > 1)
+        {
+            BuildMode = false;
+            DeleteMode = true;
+        }
     }
 }

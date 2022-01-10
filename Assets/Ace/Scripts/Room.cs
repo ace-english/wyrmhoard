@@ -132,32 +132,32 @@ public class Room : MonoBehaviour
                 switch (direction)
                 {
                     case Directions.North:
-                        print("Disabling setting north wall to " + Wall.WallType.wall + " of room " + neighboringRoom.coord.ToString());
-                        northeastPillar.SetActive(true);
-                        northwestPillar.SetActive(true);
+                        neighboringRoom.southeastPillar.SetActive(true);
+                        neighboringRoom.southwestPillar.SetActive(true);
                         neighboringRoom.walls[(int)Directions.South].SetWallType(Wall.WallType.wall);
                         neighboringRoom.indicators[(int)Directions.South].gameObject.SetActive(true);
+                        neighboringRoom.indicators[(int)Directions.South].coord = this.coord;
                         break;
                     case Directions.East:
-                        print("Disabling setting East wall to " + Wall.WallType.wall + " of room " + neighboringRoom.coord.ToString());
-                        northeastPillar.SetActive(true);
-                        southeastPillar.SetActive(true);
+                        neighboringRoom.northwestPillar.SetActive(true);
+                        neighboringRoom.southwestPillar.SetActive(true);
                         neighboringRoom.walls[(int)Directions.West].SetWallType(Wall.WallType.wall);
                         neighboringRoom.indicators[(int)Directions.West].gameObject.SetActive(true);
+                        neighboringRoom.indicators[(int)Directions.West].coord = this.coord;
                         break;
                     case Directions.South:
-                        print("Disabling setting South wall to " + Wall.WallType.wall + " of room " + neighboringRoom.coord.ToString());
-                        southeastPillar.SetActive(true);
-                        southwestPillar.SetActive(true);
+                        neighboringRoom.northeastPillar.SetActive(true);
+                        neighboringRoom.northwestPillar.SetActive(true);
                         neighboringRoom.walls[(int)Directions.North].SetWallType(Wall.WallType.wall);
                         neighboringRoom.indicators[(int)Directions.North].gameObject.SetActive(true);
+                        neighboringRoom.indicators[(int)Directions.North].coord = this.coord;
                         break;
                     case Directions.West:
-                        print("Disabling setting West wall to " + Wall.WallType.wall + " of room " + neighboringRoom.coord.ToString());
-                        southwestPillar.SetActive(true);
-                        northwestPillar.SetActive(true);
+                        neighboringRoom.southeastPillar.SetActive(true);
+                        neighboringRoom.northeastPillar.SetActive(true);
                         neighboringRoom.walls[(int)Directions.East].SetWallType(Wall.WallType.wall);
                         neighboringRoom.indicators[(int)Directions.East].gameObject.SetActive(true);
+                        neighboringRoom.indicators[(int)Directions.East].coord = this.coord;
                         break;
                     default:
                         break;
