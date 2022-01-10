@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class DungeonRoot : MonoBehaviour
     //dictionary of coords, room pointers (or room serial/string encoders)
     public GameObject roomPrefab;
     private Dictionary<RoomCoord,Room> dungeonMap;
+
+    public bool BuildMode, DeleteMode;
 
     #region Singleton
     private static DungeonRoot _instance;
@@ -56,12 +59,16 @@ public class DungeonRoot : MonoBehaviour
 
             //add to dictionary
             dungeonMap.Add(coord, newRoom);
+            foreach (KeyValuePair<RoomCoord, Room> pair in dungeonMap){
+                print(pair.Key.ToString() + ": " + pair.Value);
+            }
 
         }
     }
 
     public bool IsThereARoomAt(RoomCoord coord)
     {
+        print("checking for " + coord.ToString());
         return dungeonMap.ContainsKey(coord);
     }
 
@@ -73,5 +80,32 @@ public class DungeonRoot : MonoBehaviour
             return room;
         }
         return null;
+    }
+
+    public void RemoveRoom(RoomCoord coord)
+    {
+        Room room = GetRoomAt(coord);
+        room.RemoveNeighboringDoors();
+        //remove itself from the master map
+        dungeonMap.Remove(coord);
+        foreach (Transform child in room.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        GameObject.Destroy(room.gameObject);       
+        //TODO: ask pathfinder if all rooms are accessible
+        
+    }
+
+    public void EnableBuildMode()
+    {
+        BuildMode = true;
+        DeleteMode = false;
+    }
+
+    public void EnableDeleteMode()
+    {
+        BuildMode = false;
+        DeleteMode = true;
     }
 }

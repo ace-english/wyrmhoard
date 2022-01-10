@@ -15,11 +15,11 @@ public class Wall : MonoBehaviour
 
     public void SetWallType(WallType type)
     {
-        //destroy previoes prefabs
-        GameObject[] components = this.GetComponentsInChildren<GameObject>();
-        foreach (GameObject obj in components)
+        //destroy previous prefabs
+        //Transform[] components = this.GetComponentsInChildren<Transform>();
+        foreach (Transform child in transform)
         {
-            GameObject.Destroy(obj);
+            GameObject.Destroy(child.gameObject);
         }
         //if wall type was none, just make sure the torch setting is accurate and we're done
         if(type == WallType.none)
@@ -48,6 +48,8 @@ public class Wall : MonoBehaviour
 
     public void AddTorches()
     {
+        if (wallType == WallType.none)
+            return;
         if (!hasTorches) {
             hasTorches = true;
             Instantiate(doubleTorchWallPrefab, this.transform);

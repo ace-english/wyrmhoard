@@ -7,19 +7,10 @@ public class NextRoomIndicator : MonoBehaviour
     public GameObject arrowIndicator;
     public RoomCoord coord;
 
-    //on instantiateion, each arrow should generate a ID/coord for its potential position
-    private void Awake()
-    {
-        //edit: nvm all this
-        //get parent room's coords
-        //name yourself accordingly
-        //check dungeon's coords
-        //if you have a room there, disable yourself
-    }
-
     void OnMouseEnter()
     {
-        arrowIndicator.SetActive(true);
+        if(DungeonRoot.Instance.BuildMode)
+            arrowIndicator.SetActive(true);
     }
     void OnMouseExit()
     {
@@ -27,7 +18,10 @@ public class NextRoomIndicator : MonoBehaviour
     }
     void OnMouseDown()
     {
-        print("creating new room at " + coord.ToString());
-        DungeonRoot.Instance.CreateRoom(coord);
+        if (DungeonRoot.Instance.BuildMode)
+        {
+            print("creating new room at " + coord.ToString());
+            DungeonRoot.Instance.CreateRoom(coord);
+        }
     }
 }

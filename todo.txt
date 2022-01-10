@@ -6,16 +6,25 @@
 		[x] flicker
 		[ ] animated mesh
 		[x] emmissive material
+		[ ] spot lights?
 	[x] door animation
-	[ ] ability to add more rooms
+	[x] ability to add more rooms
 		[x] emmissive model
 		[x] on click hitbox
 		[x] hide until hovered
 	[ ] traps
 	[ ] treasure
+torches are laggy. setting to turn off? Can I make them less laggy?
+	- master torch controller: each torch, on instance, adds istelf to the master's list
 [ ] player
 	[x] fly controls (thanks Sergey Stafeev)
 	[ ] UI
+		[ ] other tools?
+			-redecorate
+			-bulldoze wall
+			-turn off torches (expensive)
+			-add wall
+				-going to need a pathfinder test to make sure you can still complete all rooms
 [ ] walls cutaway
 up and down? spiral staircase?
 	- add additional staircases
@@ -23,5 +32,6 @@ up and down? spiral staircase?
 [ ] save files
 	-parser
 	should be sharable and editable, similar to stardew. Calculate cost at run time
+[ ] delete rooms
 
 Give knight a torch!

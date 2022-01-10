@@ -17,9 +17,9 @@ public class Room : MonoBehaviour
 
     //can get all torches with just getComponentsInChildren<TorchBehvaior>()
 
-    // Start is called before the first frame update
     public void init(RoomCoord coord)
     {
+        print("Setting up room at " + coord.ToString());
         this.coord = coord;
         //change surrounding walls to doors
         //interate through each neighboring coord
@@ -37,19 +37,45 @@ public class Room : MonoBehaviour
         //foreach (RoomCoord direction in Config.NextDirection)
         RoomCoord currentCoord;
         Room neighboringRoom;
-        for (Directions direction = Directions.North; direction < Directions.West; direction++)
+        for (Directions direction = Directions.North; direction <= Directions.West; direction++)
         {
+            print("Currently looking at " + direction);
             currentCoord = coord + Config.NextDirection[(int)direction];
+            //print("CurrentCord: " + currentCoord.ToString());
             if (DungeonRoot.Instance.IsThereARoomAt(currentCoord))
             {
+                print("Room found at " + currentCoord.ToString());
                 indicators[(int)direction].gameObject.SetActive(false);
                 neighboringRoom = DungeonRoot.Instance.GetRoomAt(currentCoord);
                 switch (direction)
                 {
                     case Directions.North:
+                        print("Disabling setting north wall to " + Wall.WallType.door + " of room " + neighboringRoom.coord.ToString());
                         northeastPillar.SetActive(false);
                         northwestPillar.SetActive(false);
                         neighboringRoom.walls[(int)Directions.South].SetWallType(Wall.WallType.door);
+                        neighboringRoom.indicators[(int)Directions.South].gameObject.SetActive(false);
+                        break;
+                    case Directions.East:
+                        print("Disabling setting East wall to " + Wall.WallType.door + " of room " + neighboringRoom.coord.ToString());
+                        northeastPillar.SetActive(false);
+                        southeastPillar.SetActive(false);
+                        neighboringRoom.walls[(int)Directions.West].SetWallType(Wall.WallType.door);
+                        neighboringRoom.indicators[(int)Directions.West].gameObject.SetActive(false);
+                        break;
+                    case Directions.South:
+                        print("Disabling setting South wall to " + Wall.WallType.door + " of room " + neighboringRoom.coord.ToString());
+                        southeastPillar.SetActive(false);
+                        southwestPillar.SetActive(false);
+                        neighboringRoom.walls[(int)Directions.North].SetWallType(Wall.WallType.door);
+                        neighboringRoom.indicators[(int)Directions.North].gameObject.SetActive(false);
+                        break;
+                    case Directions.West:
+                        print("Disabling setting West wall to " + Wall.WallType.door + " of room " + neighboringRoom.coord.ToString());
+                        southwestPillar.SetActive(false);
+                        northwestPillar.SetActive(false);
+                        neighboringRoom.walls[(int)Directions.East].SetWallType(Wall.WallType.door);
+                        neighboringRoom.indicators[(int)Directions.East].gameObject.SetActive(false);
                         break;
                     default:
                         break;
@@ -57,11 +83,95 @@ public class Room : MonoBehaviour
             }
             else //there is no room there
             {
+                print("No room fount at " + currentCoord.ToString());
                 indicators[(int)direction].gameObject.SetActive(true);
                 indicators[(int)direction].coord = currentCoord;
+
+                switch (direction)
+                {
+                    case Directions.North:
+                        print("Setting north wall to " + Wall.WallType.wall + " of room " + coord.ToString());
+                        walls[(int)Directions.North].SetWallType(Wall.WallType.wall);
+                        break;
+                    case Directions.East:
+                        print("Setting East wall to " + Wall.WallType.wall + " of room " + coord.ToString());
+                        walls[(int)Directions.East].SetWallType(Wall.WallType.wall);
+                        break;
+                    case Directions.South:
+                        print("Setting South wall to " + Wall.WallType.wall + " of room " + coord.ToString());
+                        walls[(int)Directions.South].SetWallType(Wall.WallType.wall);
+                        break;
+                    case Directions.West:
+                        print("Setting West wall to " + Wall.WallType.wall + " of room " + coord.ToString());
+                        walls[(int)Directions.West].SetWallType(Wall.WallType.wall);
+                        break;
+                    default:
+                        break;
+                }
             }
+            walls[(int)Directions.North].AddTorches();
+            walls[(int)Directions.South].AddTorches();
         }
 
     }
 
+    public void RemoveNeighboringDoors()
+    {
+        RoomCoord currentCoord;
+        Room neighboringRoom;
+        for (Directions direction = Directions.North; direction <= Directions.West; direction++)
+        {
+            print("Currently looking at " + direction);
+            currentCoord = coord + Config.NextDirection[(int)direction];
+            //print("CurrentCord: " + currentCoord.ToString());
+            if (DungeonRoot.Instance.IsThereARoomAt(currentCoord))
+            {
+                print("Room found at " + currentCoord.ToString());
+                indicators[(int)direction].gameObject.SetActive(false);
+                neighboringRoom = DungeonRoot.Instance.GetRoomAt(currentCoord);
+                switch (direction)
+                {
+                    case Directions.North:
+                        print("Disabling setting north wall to " + Wall.WallType.wall + " of room " + neighboringRoom.coord.ToString());
+                        northeastPillar.SetActive(true);
+                        northwestPillar.SetActive(true);
+                        neighboringRoom.walls[(int)Directions.South].SetWallType(Wall.WallType.wall);
+                        neighboringRoom.indicators[(int)Directions.South].gameObject.SetActive(true);
+                        break;
+                    case Directions.East:
+                        print("Disabling setting East wall to " + Wall.WallType.wall + " of room " + neighboringRoom.coord.ToString());
+                        northeastPillar.SetActive(true);
+                        southeastPillar.SetActive(true);
+                        neighboringRoom.walls[(int)Directions.West].SetWallType(Wall.WallType.wall);
+                        neighboringRoom.indicators[(int)Directions.West].gameObject.SetActive(true);
+                        break;
+                    case Directions.South:
+                        print("Disabling setting South wall to " + Wall.WallType.wall + " of room " + neighboringRoom.coord.ToString());
+                        southeastPillar.SetActive(true);
+                        southwestPillar.SetActive(true);
+                        neighboringRoom.walls[(int)Directions.North].SetWallType(Wall.WallType.wall);
+                        neighboringRoom.indicators[(int)Directions.North].gameObject.SetActive(true);
+                        break;
+                    case Directions.West:
+                        print("Disabling setting West wall to " + Wall.WallType.wall + " of room " + neighboringRoom.coord.ToString());
+                        southwestPillar.SetActive(true);
+                        northwestPillar.SetActive(true);
+                        neighboringRoom.walls[(int)Directions.East].SetWallType(Wall.WallType.wall);
+                        neighboringRoom.indicators[(int)Directions.East].gameObject.SetActive(true);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+
+
+    void OnMouseDown()
+    {
+        if (DungeonRoot.Instance.DeleteMode)
+        {
+            DungeonRoot.Instance.RemoveRoom(this.coord);
+        }
+    }
 }
