@@ -109,9 +109,9 @@ public class Room : MonoBehaviour
                         break;
                 }
             }
-            walls[(int)Directions.North].AddTorches();
-            walls[(int)Directions.South].AddTorches();
         }
+        walls[(int)Directions.North].AddTorches();
+        walls[(int)Directions.South].AddTorches();
 
     }
 

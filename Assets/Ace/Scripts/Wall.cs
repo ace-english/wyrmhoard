@@ -21,11 +21,13 @@ public class Wall : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
+        
         //if wall type was none, just make sure the torch setting is accurate and we're done
         if(type == WallType.none)
         {
             hasTorches = false;
         }
+        
         //replace the torches if it had any
         if (hasTorches)
         {
@@ -50,10 +52,8 @@ public class Wall : MonoBehaviour
     {
         if (wallType == WallType.none)
             return;
-        if (!hasTorches) {
-            hasTorches = true;
-            Instantiate(doubleTorchWallPrefab, this.transform);
-        }
+        hasTorches = true;
+        Instantiate(doubleTorchWallPrefab, this.transform);
     }
 
 
