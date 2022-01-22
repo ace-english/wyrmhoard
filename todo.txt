@@ -13,8 +13,17 @@
 		[x] on click hitbox
 		[x] hide until hovered
 	[ ] traps
+		[ ] swinging hammer
+		[ ] false floor?
+		[ ] pit
+			- will work by swapping out floor tile
+		[ ] pressure plate activation
+		[ ] shooting darts
+		[ ] locked doors
+		[ ] enemies?
+		[ ] look to Fall Guys for inspiration
 	[ ] treasure
-torches are laggy. setting to turn off? Can I make them less laggy?
+torches are laggy. setting to turn off? Can I make them less laggy? maybe by turning into spot. Or, one light per room regardless of torch presense?
 	- master torch controller: each torch, on instance, adds istelf to the master's list
 [ ] player
 	[x] fly controls (thanks Sergey Stafeev)
@@ -25,6 +34,14 @@ torches are laggy. setting to turn off? Can I make them less laggy?
 			-turn off torches (expensive)
 			-add wall
 				-going to need a pathfinder test to make sure you can still complete all rooms
+[ ] adventurer
+	[ ] open doors
+	[ ] duck/slide
+	[ ] pick up stuff
+	[ ] class system?
+		-knight: extra hitpoint
+		-mage: can teleport
+		-rogue: can pick locks
 [ ] walls cutaway
 up and down? spiral staircase?
 	- add additional staircases
@@ -32,6 +49,8 @@ up and down? spiral staircase?
 [ ] save files
 	-parser
 	should be sharable and editable, similar to stardew. Calculate cost at run time
-[ ] delete rooms
+[x] delete rooms
+[ ] scoring
+	[ ] rooms in parallel get the cost of the cheaper rooms
 
 Give knight a torch!
