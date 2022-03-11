@@ -9,7 +9,12 @@ public class DungeonRoot : MonoBehaviour
     public GameObject roomPrefab;
     private Dictionary<RoomCoord,Room> dungeonMap;
 
-    public bool BuildMode, DeleteMode;
+    public bool BuildMode, DeleteMode, RedecorateMode;
+
+    [Space]
+    public GameObject[] decorationPrefabs_center;
+    public GameObject[] decorationPrefabs_misc;
+    public GameObject[] decorationPrefabs_wall;
 
     #region Singleton
     private static DungeonRoot _instance;
@@ -101,6 +106,14 @@ public class DungeonRoot : MonoBehaviour
     {
         BuildMode = true;
         DeleteMode = false;
+        RedecorateMode = false;
+    }
+
+    public void EnableRedecorateMode()
+    {
+        BuildMode = false;
+        DeleteMode = false;
+        RedecorateMode = true;
     }
 
     public void EnableDeleteMode()
@@ -109,6 +122,7 @@ public class DungeonRoot : MonoBehaviour
         {
             BuildMode = false;
             DeleteMode = true;
+            RedecorateMode = false;
         }
     }
 }

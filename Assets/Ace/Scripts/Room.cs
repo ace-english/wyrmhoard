@@ -13,7 +13,7 @@ public class Room : MonoBehaviour
     private RoomCoord coord;
 
     [Space]
-    public GameObject[] decorationPrefabs;
+    public GameObject[] decorations;
 
     //can get all torches with just getComponentsInChildren<TorchBehvaior>()
 
@@ -22,7 +22,7 @@ public class Room : MonoBehaviour
         print("Setting up room at " + coord.ToString());
         this.coord = coord;
         //change surrounding walls to doors
-        //interate through each neighboring coord
+        //iterate through each neighboring coord
         //if coord is occupied, 
             //change relevent wall to door
                 //do not create wall for each of those
@@ -173,5 +173,26 @@ public class Room : MonoBehaviour
         {
             DungeonRoot.Instance.RemoveRoom(this.coord);
         }
+        if (DungeonRoot.Instance.RedecorateMode)
+        {
+            RandomizeDecor();
+        }
+    }
+
+    public void RandomizeDecor()
+    {
+        if (!HasTrap())
+        {
+            //roll on random inside bits table
+            //add to array if non null
+        }
+        //for each wall without doors, roll on table
+        //roll on non inside bit table
+        //can have 0-all
+    }
+
+    public bool HasTrap()
+    {
+        return false;
     }
 }

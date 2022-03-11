@@ -54,3 +54,7 @@ up and down? spiral staircase?
 	[ ] rooms in parallel get the cost of the cheaper rooms
 
 Give knight a torch!
+Can move objects if desired, like Portal mode. 
+Before submitting to gallery, must be able to beat (Horse mode)
+Decor is free! (Or real cheap)
+Weight makes you slower (loot, carrying chair? etc)
