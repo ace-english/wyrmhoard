@@ -1,7 +1,26 @@
+First, make campaign
+	- auto generate
+	- iterate loot
+	- hack n slash? point and click and turn based?
+	- level up and learn moves
+		- classeS? skill tree?
+
+Then, dungeon designer
+	-share programs
+	- challenges mean gold when a hero hits them?
+		- want to encourage dungeon designs that are fun, challenging, doable. Rating system. Cash per play not per failure - but how to avoid make boring easy maps?
+	- reward is proportionate to all the features. Decorations = a little more loot. Player does not lose loot when their dungeon is completed
+
+Room features
+	monster
+	damsel
+	empty decorated room
+
 [ ] room root
 	[x] door
 	[x] wall
 	[ ] decor
+	[ ] stairs up/down
 	[x] lights
 		[x] flicker
 		[ ] animated mesh
@@ -23,6 +42,8 @@
 		[ ] enemies?
 		[ ] look to Fall Guys for inspiration
 	[ ] treasure
+[ ] import cheat console
+	[ ] hide/show cielings
 torches are laggy. setting to turn off? Can I make them less laggy? maybe by turning into spot. Or, one light per room regardless of torch presense?
 	- master torch controller: each torch, on instance, adds istelf to the master's list
 [ ] player
@@ -33,8 +54,9 @@ torches are laggy. setting to turn off? Can I make them less laggy? maybe by tur
 			-bulldoze wall
 			-turn off torches (expensive)
 			-add wall
-				-going to need a pathfinder test to make sure you can still complete all rooms
+				-going to need a pathfinder test to make sure you can still complete all rooms - HORSE!
 [ ] adventurer
+	[ ] character customization
 	[ ] open doors
 	[ ] duck/slide
 	[ ] pick up stuff
@@ -58,3 +80,4 @@ Can move objects if desired, like Portal mode.
 Before submitting to gallery, must be able to beat (Horse mode)
 Decor is free! (Or real cheap)
 Weight makes you slower (loot, carrying chair? etc)
+Place traps wherever, but check for collisions?
