@@ -1,15 +1,24 @@
 First, make campaign
 	- auto generate
 	- iterate loot
-	- hack n slash? point and click and turn based?
-	- level up and learn moves
-		- classeS? skill tree?
+	- Hire heroes to clear out enemy dungeons
+		- different classes, random characters, different strengths and weaknesses
+		- preview/teaser for dungeon
+
+Gameplay loop:
+	raid dungeon
+	get money
+	use money to build base
+		base has training and where you live but also dungeon shit
+	spend rewards from raid and base on upgrade
+	repeat
 
 Then, dungeon designer
 	-share programs
 	- challenges mean gold when a hero hits them?
 		- want to encourage dungeon designs that are fun, challenging, doable. Rating system. Cash per play not per failure - but how to avoid make boring easy maps?
 	- reward is proportionate to all the features. Decorations = a little more loot. Player does not lose loot when their dungeon is completed
+	Is it for players or bots? The joy of building a killbox - but it needs to be possible
 
 Room features
 	monster
@@ -64,6 +73,7 @@ torches are laggy. setting to turn off? Can I make them less laggy? maybe by tur
 		-knight: extra hitpoint
 		-mage: can teleport
 		-rogue: can pick locks
+		- ranger: favored terrain
 [ ] walls cutaway
 up and down? spiral staircase?
 	- add additional staircases
@@ -81,3 +91,8 @@ Before submitting to gallery, must be able to beat (Horse mode)
 Decor is free! (Or real cheap)
 Weight makes you slower (loot, carrying chair? etc)
 Place traps wherever, but check for collisions?
+
+
+Multiplayer
+	-https://partner.steamgames.com/doc/features/multiplayer#networking
+	- steam has low cost servers, would work for something like file sharing
