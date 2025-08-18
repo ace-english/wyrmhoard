@@ -1,0 +1,56 @@
+.container {
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+}
+
+.center-container {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+.container {
+    background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=-857392859&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_1');
+    -unity-background-image-tint-color: rgb(89, 89, 89);
+}
+
+.build-mode-button {
+    background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=-1647660485&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_87');
+    padding: 0;
+    background-color: rgba(88, 88, 88, 0);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+}
+.build-mode-button-image {
+    width: 32px;
+    height: 32px;
+    -unity-background-image-tint-color: rgba(43, 15, 15, 0.82);
+    flex-basis: auto;
+}
+
+.build-mode-button:hover > * {
+    -unity-background-image-tint-color: rgb(255, 210, 105);
+}
+/*
+
+.build-mode-button:hover {
+    background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=-1647660485&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_89');
+    padding: 2px;
+    margin: 0px 2px 2px 2px;
+}
+*/
