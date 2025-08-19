@@ -38,6 +38,11 @@
     margin: 2px 2px 0px 2px;
 
 }
+.build-mode-button, 
+.build-mode-button-image {
+    transition-property: -unity-background-image-tint-color;
+    transition-duration: 0.1s;
+}
 
 .build-mode-button-image {
     width: 32px;
@@ -51,7 +56,7 @@
 }
 
 .build-mode-button:hover {
-    padding: 2px;
+    padding: 2px 2px 0px 2px;
     margin: 0 2px 2px 0px;
     background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=-714395431&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_88');
 }
