@@ -36,9 +36,13 @@
     border-top-color: rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0);
     margin: 2px 2px 2px 2px;
-
 }
-.build-mode-button, 
+
+.build-mode-button {
+    transition-property: -unity-background-image-tint-color;
+    transition-duration: 0.1s;
+}
+
 .build-mode-button-image {
     transition-property: -unity-background-image-tint-color;
     transition-duration: 0.1s;
@@ -48,7 +52,7 @@
     width: 20px;
     height: 20px;
     margin: 4px;
-    -unity-background-image-tint-color: rgba(43, 15, 15, 0.82);
+    -unity-background-image-tint-color: rgba(43, 15, 15, 0.75);
     flex-basis: auto;
 }
 
@@ -57,7 +61,45 @@
 }
 
 .build-mode-button:hover {
-    padding: 2px 2px 0px 2px;
-    margin: 0 2px 2px 0px;
+    padding: 2px 2px 0 2px;
+    margin: 0 2px 2px 0;
     background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=-714395431&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_88');
+}
+
+.inventory-inner {
+    height: auto;
+    width: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=697227122&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_33');
+    padding: 10px;
+    min-width: 150px;
+}
+
+.inventory-inner .item {
+    background-color: rgba(66, 69, 103, 0.6);
+    border-color: rgba(31, 35, 77, 0.4);
+    width: 32px;
+    height: 32px;
+    border-radius: 0.5px;
+}
+
+.adventurer-button {
+    background-color: rgba(88, 88, 88, 0);
+    border-color: rgba(255, 255, 255, 0);
+    background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=697227122&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_33');
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    margin-left: -6px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.adventurer-button > * {
+    height: 20px;
+    width: 20px;
 }

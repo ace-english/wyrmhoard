@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/style.uss?fileID=7433441132597879392&amp;guid=8b1b833f7be410f4caf5cd82561fe892&amp;type=3#style" />
+    <ui:VisualElement name="adventurer-toolbar" style="position: absolute; bottom: 0; right: 0; flex-grow: 1; top: auto; flex-direction: row; height: auto;">
+        <ui:Button display-tooltip-when-elided="true" name="inventory-button" class="adventurer-button" style="background-color: rgba(88, 88, 88, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); background-image: url(&apos;project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=697227122&amp;guid=1bdc0134c8c5209489391c2566ba3a6e&amp;type=3#UI assets (2x)_33&apos;); margin-left: 25px; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art/UI/Icons/Backpack.png?fileID=2800000&amp;guid=47a7bc47a5fdcb845848d31d54a5992d&amp;type=3#Backpack&apos;);" />
+        </ui:Button>
+        <ui:Button display-tooltip-when-elided="true" name="health" class="adventurer-button">
+            <ui:VisualElement class="blah" style="background-image: url(&apos;project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=-428589165&amp;guid=1bdc0134c8c5209489391c2566ba3a6e&amp;type=3#UI assets (2x)_1288&apos;);" />
+        </ui:Button>
+        <ui:Button display-tooltip-when-elided="true" name="abilities" class="adventurer-button">
+            <ui:VisualElement class="blah" style="background-image: url(&apos;project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=670734422&amp;guid=1bdc0134c8c5209489391c2566ba3a6e&amp;type=3#UI assets (2x)_1294&apos;);" />
+        </ui:Button>
+        <ui:GroupBox name="inventory-container" class="inventory-inner" style="flex-direction: row; top: 41px; bottom: auto; position: absolute; margin-top: -10px; right: 0; margin-right: 0; margin-left: 0; margin-bottom: 0;">
+            <ui:Button display-tooltip-when-elided="true" class="item" style="background-image: url(&apos;project://database/Assets/Art/UI/Icons/PotionRed.png?fileID=2800000&amp;guid=9f90b737f33a9ec4c9aa86db295eee21&amp;type=3#PotionRed&apos;);" />
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>
