@@ -35,7 +35,7 @@
     border-right-color: rgba(255, 255, 255, 0);
     border-top-color: rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0);
-    margin: 2px 2px 0px 2px;
+    margin: 2px 2px 2px 2px;
 
 }
 .build-mode-button, 
@@ -45,8 +45,9 @@
 }
 
 .build-mode-button-image {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
+    margin: 4px;
     -unity-background-image-tint-color: rgba(43, 15, 15, 0.82);
     flex-basis: auto;
 }

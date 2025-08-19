@@ -2,7 +2,13 @@
     <Style src="project://database/Assets/UI%20Toolkit/style.uss?fileID=7433441132597879392&amp;guid=8b1b833f7be410f4caf5cd82561fe892&amp;type=3#style" />
     <ui:GroupBox style="align-items: flex-start; flex-direction: column; flex-shrink: 1; flex-grow: 1; flex-basis: 50px;">
         <ui:Button display-tooltip-when-elided="true" enable-rich-text="false" tooltip="Toggle Build Mode" class="build-mode-button">
-            <ui:VisualElement class="build-mode-button-image" style="background-image: url(&apos;project://database/Assets/Art/UI/Icons/hammer-fill.png?fileID=2800000&amp;guid=ece1aee489380c741b4e832cb55785b8&amp;type=3#hammer-fill&apos;); cursor: url(&apos;project://database/Assets/Art/UI/cursor/pointer-hand.png?fileID=2800000&amp;guid=c391189e425465f4ca6959ed04158b56&amp;type=3#pointer-hand&apos;);" />
+            <ui:VisualElement class="build-mode-button-image" style="background-image: url(&apos;project://database/Assets/Art/UI/Icons/Hammer.png?fileID=2800000&amp;guid=8bd769887a54bbb4bb98bee02f3a920d&amp;type=3#Hammer&apos;); cursor: url(&apos;project://database/Assets/Art/UI/cursor/pointer-hand.png?fileID=2800000&amp;guid=c391189e425465f4ca6959ed04158b56&amp;type=3#pointer-hand&apos;);" />
+        </ui:Button>
+        <ui:Button display-tooltip-when-elided="true" enable-rich-text="false" tooltip="Delete Room" class="build-mode-button">
+            <ui:VisualElement class="build-mode-button-image" style="background-image: url(&apos;project://database/Assets/Art/UI/Icons/Trashbin.png?fileID=2800000&amp;guid=a428b45a1ea0a17428e4f54fcbbeae9e&amp;type=3#Trashbin&apos;); cursor: url(&apos;project://database/Assets/Art/UI/cursor/pointer-hand.png?fileID=2800000&amp;guid=c391189e425465f4ca6959ed04158b56&amp;type=3#pointer-hand&apos;);" />
+        </ui:Button>
+        <ui:Button display-tooltip-when-elided="true" enable-rich-text="false" tooltip="Restyle Room" class="build-mode-button">
+            <ui:VisualElement class="build-mode-button-image" style="background-image: url(&apos;project://database/Assets/Art/UI/Icons/PaintBrush.png?fileID=2800000&amp;guid=3247ab493c053d94a9ecbd8cd1f4674d&amp;type=3#PaintBrush&apos;); cursor: url(&apos;project://database/Assets/Art/UI/cursor/pointer-hand.png?fileID=2800000&amp;guid=c391189e425465f4ca6959ed04158b56&amp;type=3#pointer-hand&apos;);" />
         </ui:Button>
     </ui:GroupBox>
 </ui:UXML>
