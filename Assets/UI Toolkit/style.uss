@@ -103,3 +103,8 @@
     height: 20px;
     width: 20px;
 }
+
+.adventurer-button.active,
+.adventurer-button:hover {
+    background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=765097980&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_16');
+}
