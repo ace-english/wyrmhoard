@@ -1,3 +1,9 @@
+/*
+
+common
+
+*/
+
 .container {
     flex-grow: 1;
     flex-basis: 0;
@@ -26,6 +32,11 @@
     background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=-857392859&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_1');
     -unity-background-image-tint-color: rgb(89, 89, 89);
 }
+/*
+
+build mode exclusive
+
+*/
 
 .build-mode-button {
     background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=-1647660485&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_87');
@@ -46,12 +57,13 @@
 .build-mode-button-image {
     transition-property: -unity-background-image-tint-color;
     transition-duration: 0.1s;
+    padding-left:1px;
 }
 
 .build-mode-button-image {
-    width: 20px;
-    height: 20px;
-    margin: 4px;
+    width: 50px;
+    height: 50px;
+    margin: 8px 4px 8px 6px;
     -unity-background-image-tint-color: rgba(43, 15, 15, 0.75);
     flex-basis: auto;
 }
@@ -65,6 +77,11 @@
     margin: 0 2px 2px 0;
     background-image: url('project://database/Assets/Art/UI/UI%20assets%20(2x).png?fileID=-714395431&guid=1bdc0134c8c5209489391c2566ba3a6e&type=3#UI assets (2x)_88');
 }
+/*
+
+adventure mode exclusive
+
+*/
 
 .inventory-inner {
     height: auto;
